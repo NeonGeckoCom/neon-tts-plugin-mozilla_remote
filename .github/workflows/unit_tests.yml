@@ -21,7 +21,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          sudo apt install -y libsndfile1
+          holmesv @ git+https://github.com/HelloChatterbox/holmesV
       - name: Test Mozilla TTS
         run: |
           pip install pytest pytest-timeout

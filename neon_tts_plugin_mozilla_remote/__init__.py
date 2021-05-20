@@ -40,7 +40,7 @@ class MozillaRemoteTTS(TTS):
         super(MozillaRemoteTTS, self).__init__(lang, config, MozillaTTSValidator(self),
                                                audio_ext="mp3",
                                                ssml_tags=["speak"])
-        self.base_url = config.get("api_url", "http://64.34.186.120:5002/api/tts")
+        self.base_url = config.get("api_url", "http://0.0.0.0:5002/api/tts")
 
     def get_tts(self, sentence, wav_file, speaker=None):
         stopwatch = Stopwatch()
