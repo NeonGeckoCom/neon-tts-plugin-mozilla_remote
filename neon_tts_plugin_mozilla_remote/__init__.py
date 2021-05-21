@@ -45,7 +45,7 @@ class MozillaRemoteTTS(TTS):
     def get_tts(self, sentence, wav_file, speaker=None):
         stopwatch = Stopwatch()
 
-        to_speak = format_speak_tags(sentence)
+        to_speak = format_speak_tags(sentence).lstrip("<speak>").rstrip("</speak>")  # TODO: Update utils to handle DM
         LOG.debug(to_speak)
         if to_speak:
             url = self._build_url(to_speak)
