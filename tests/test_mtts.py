@@ -30,7 +30,8 @@ from neon_tts_plugin_mozilla_remote import MozillaRemoteTTS
 class TestMozilla(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.mTTS = MozillaRemoteTTS(config={"api_url": "https://localhost:5002/api/tts"})
+        tts_url = os.getenv("TTS_URL")
+        cls.mTTS = MozillaRemoteTTS(config={"api_url": tts_url})
 
     @classmethod
     def tearDownClass(cls) -> None:
