@@ -22,7 +22,7 @@
 from setuptools import setup, find_packages
 from os import path, getenv
 
-PLUGIN_ENTRY_POINT = 'mozilla_remote = neon_tts_plugin_mozilla_remote:MozillaRemoteTTS'
+PLUGIN_ENTRY_POINT = 'neon-tts-plugin-mozilla-remote = neon_tts_plugin_mozilla_remote:MozillaRemoteTTS'
 
 
 def get_requirements(requirements_filename: str):
@@ -55,7 +55,7 @@ with open("./version.py", "r", encoding="utf-8") as v:
                 version = line.split("'")[1]
 
 setup(
-    name='neon-tts-plugin-mozilla_remote',
+    name='neon-tts-plugin-mozilla-remote',
     version=version,
     description='A Mozilla TTS plugin for Neon',
     long_description=long_description,
@@ -63,7 +63,7 @@ setup(
     url='https://github.com/NeonGeckoCom/neon-tts-plugin-mozilla_remote',
     author='Neongecko',
     author_email='developers@neon.ai',
-    license='NeonAI License v1.0',
+    license='BSD 3',
     packages=find_packages(),
     install_requires=get_requirements("requirements.txt"),
     zip_safe=True,
