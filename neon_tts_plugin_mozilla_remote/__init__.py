@@ -46,10 +46,10 @@ class MozillaRemoteTTS(TTS):
     def get_tts(self, sentence, wav_file, speaker=None):
         stopwatch = Stopwatch()
 
-        to_speak = normalize_string_to_speak(format_speak_tags(sentence, False))
+        to_speak = format_speak_tags(sentence, False)
         LOG.debug(to_speak)
         if to_speak:
-            url = self._build_url(to_speak)
+            url = self._build_url(normalize_string_to_speak(to_speak))
             with stopwatch:
                 wav_data = urlopen(url).read()
             LOG.debug(f"Request time={stopwatch.time}")
