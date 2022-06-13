@@ -55,7 +55,7 @@ with open("./version.py", "r", encoding="utf-8") as v:
                 version = line.split("'")[1]
 
 setup(
-    name='neon-tts-plugin-mozilla-remote',
+    name='neon-tts-plugin-mozilla_remote',
     version=version,
     description='A Mozilla TTS plugin for Neon',
     long_description=long_description,
