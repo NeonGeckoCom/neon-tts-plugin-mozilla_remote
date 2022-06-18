@@ -22,7 +22,7 @@
 from setuptools import setup, find_packages
 from os import path, getenv
 
-PLUGIN_ENTRY_POINT = 'neon-tts-plugin-mozilla-remote = neon_tts_plugin_mozilla_remote:MozillaRemoteTTS'
+PLUGIN_ENTRY_POINT = 'mozilla_remote = neon_tts_plugin_mozilla_remote:MozillaRemoteTTS'
 
 
 def get_requirements(requirements_filename: str):
